@@ -1,0 +1,46 @@
+<h1 class="header">To do list</h1>
+
+
+
+<div class="input-group mb-3 ">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Add New Task"
+    [(ngModel)]="currentvalue"
+    #inputvalue
+  />
+
+  <button
+    class="btn btn-outline-secondary"
+    type="button"
+    id="button-addon2"
+    [disabled]="!currentvalue"
+    (click)="TodoTask(inputvalue)"
+  >
+    Add Task
+  </button>
+</div>
+
+<div class="input-group mb-3" *ngFor="let task of mytasks; let i=index" >
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Add New Task"
+    [value]="task"
+    readonly
+  />
+  <button
+    class="btn btn-outline-secondary"
+    type="button"
+    id="button-addon2"
+    (click)="taskcompletd(i)"
+  ><i class="fas fa-check"></i> </button>
+</div>
+
+<h1 [hidden]="count" class="completed-header" >Completed tasks</h1>
+
+<div *ngFor="let donetask of completedtasks">
+  <p class="completed-task">{{ donetask }}</p>
+</div>
+

@@ -1,0 +1,30 @@
+/* src/styles.css */
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,600;1,200&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  max-width: 90%;
+  margin-left: 5%;
+  text-align: center;
+}
+
+
+.header {
+  margin-top: 50px;
+  text-align: center;
+  background-color: rgb(157, 235, 157);
+}
+
+.completed-header {
+  color: green;
+  font-size: 24px;
+  text-align: center;
+}
+
+.completed-task {
+  text-decoration: line-through;
+  color: #888;
+
+  text-align: center;
+}
